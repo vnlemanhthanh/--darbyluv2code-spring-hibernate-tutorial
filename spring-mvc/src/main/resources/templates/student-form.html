@@ -1,0 +1,26 @@
+<!--
+  ~ Copyright (c) 2023. vnlemanhthanh.com
+  -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student </title>
+</head>
+<body>
+<h3>Student Registration Form</h3>
+
+<form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+
+    First name: <input type="text" th:field="*{firstName}" name="" id="">
+    <br><br>
+    Last name: <input type="text" th:field="*{lastName}" name="" id="">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>

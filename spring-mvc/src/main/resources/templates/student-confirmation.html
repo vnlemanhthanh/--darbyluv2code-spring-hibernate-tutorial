@@ -1,0 +1,19 @@
+<!--
+  ~ Copyright (c) 2023. vnlemanhthanh.com
+  -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/demo.css}" />
+    <title>Student Confirmation Page</title>
+</head>
+<body>
+<h3>Student Confirmation</h3>
+
+Student name: <span th:text="${student.firstName} + ' ' + ${student.lastName}" />
+
+</body>
+</html>
