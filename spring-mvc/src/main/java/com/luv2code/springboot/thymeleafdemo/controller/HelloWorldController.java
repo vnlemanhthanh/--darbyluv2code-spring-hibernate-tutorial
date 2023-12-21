@@ -7,6 +7,8 @@ package com.luv2code.springboot.thymeleafdemo.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -23,7 +25,7 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-    @RequestMapping("/processFormV2")
+    @GetMapping("/processFormV2")
     public String letsShoutDude(HttpServletRequest request, Model model) {
         String name = request.getParameter("studentName");
         String result = "Yo! Yo! " + name.toUpperCase();
@@ -33,7 +35,7 @@ public class HelloWorldController {
         return "helloworld";
     }
 
-    @RequestMapping("/processFormV3")
+    @PostMapping("/processFormV3")
     public String processFormV3(@RequestParam("studentName") String theName, Model model) {
 
         String result = "Version 3! Yo! " + theName.toUpperCase();
