@@ -12,11 +12,25 @@
 </head>
 <body>
 
+<form th:action="@{/processFormV3}" method="GET">
+    <input type="text" name="studentName" id="" placeholder="What's your name?">
+
+    <input type="submit" value="Submit V3" >
+    
+</form>
+<br>
 <form th:action="@{/processFormV2}" method="GET">
     <input type="text" name="studentName" id="" placeholder="What's your name?">
 
-    <input type="submit" value="Submit" >
-    
+    <input type="submit" value="Submit V2" >
+
+</form>
+<br>
+<form th:action="@{/processForm}" method="GET">
+    <input type="text" name="studentName" id="" placeholder="What's your name?">
+
+    <input type="submit" value="Submit V1" >
+
 </form>
 </body>
 </html>

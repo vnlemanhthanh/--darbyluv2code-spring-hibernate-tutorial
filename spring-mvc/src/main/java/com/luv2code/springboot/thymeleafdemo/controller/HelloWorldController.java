@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -26,6 +27,16 @@ public class HelloWorldController {
     public String letsShoutDude(HttpServletRequest request, Model model) {
         String name = request.getParameter("studentName");
         String result = "Yo! Yo! " + name.toUpperCase();
+
+        model.addAttribute("message", result);
+
+        return "helloworld";
+    }
+
+    @RequestMapping("/processFormV3")
+    public String processFormV3(@RequestParam("studentName") String theName, Model model) {
+
+        String result = "Version 3! Yo! " + theName.toUpperCase();
 
         model.addAttribute("message", result);
 
