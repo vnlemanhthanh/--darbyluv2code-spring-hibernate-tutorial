@@ -8,17 +8,14 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/css/demo.css}" />
-    <title>Hello World</title>
+    <title>Input Form - Hello World</title>
 </head>
 <body>
 
-<h2>Hello World of Spring!</h2>
-<br><br>
-<div>
-    Student name: <span th:text="${param.studentName}"></span>
+<form th:action="@{/processForm}" method="GET">
+    <input type="text" name="studentName" id="" placeholder="What's your name?">
 
-
-</div>
+    <input type="submit" value="Submit" >
     
 </form>
 </body>
